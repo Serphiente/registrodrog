@@ -115,7 +115,7 @@
 @endcan
 
   $.extend(true, $.fn.dataTable.defaults, {
-    order: [[ 1, 'desc' ]],
+    order: [[ 2, 'asc' ]],
     pageLength: 100,
   });
   $('.datatable-RawMaterial:not(.ajaxTable)').DataTable({ buttons: dtButtons })

@@ -66,8 +66,8 @@ return [
         ],
     ],
     'rawMaterial'    => [
-        'title'          => 'Raw Material',
-        'title_singular' => 'Raw Material',
+        'title'          => 'Materia Prima',
+        'title_singular' => 'Materia Prima',
         'fields'         => [
             'id'                => 'ID',
             'id_helper'         => '',
