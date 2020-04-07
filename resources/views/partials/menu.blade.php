@@ -122,6 +122,30 @@
                         </ul>
                     </li>
                 @endcan
+                @can('supplier_access')
+                    <li class="nav-item">
+                        <a href="{{ route("admin.suppliers.index") }}" class="nav-link {{ request()->is('admin/suppliers') || request()->is('admin/suppliers/*') ? 'active' : '' }}">
+                            <i class="fa-fw nav-icon fas fa-cogs">
+
+                            </i>
+                            <p>
+                                {{ trans('cruds.supplier.title') }}
+                            </p>
+                        </a>
+                    </li>
+                @endcan
+                @can('pharmaceutical_form_access')
+                    <li class="nav-item">
+                        <a href="{{ route("admin.pharmaceutical-forms.index") }}" class="nav-link {{ request()->is('admin/pharmaceutical-forms') || request()->is('admin/pharmaceutical-forms/*') ? 'active' : '' }}">
+                            <i class="fa-fw nav-icon fas fa-cogs">
+
+                            </i>
+                            <p>
+                                {{ trans('cruds.pharmaceuticalForm.title') }}
+                            </p>
+                        </a>
+                    </li>
+                @endcan
                 @if(file_exists(app_path('Http/Controllers/Auth/ChangePasswordController.php')))
                     @can('profile_password_edit')
                         <li class="nav-item">

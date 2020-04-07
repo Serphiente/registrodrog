@@ -138,6 +138,46 @@ class PermissionsTableSeeder extends Seeder
             ],
             [
                 'id'    => '33',
+                'title' => 'supplier_create',
+            ],
+            [
+                'id'    => '34',
+                'title' => 'supplier_edit',
+            ],
+            [
+                'id'    => '35',
+                'title' => 'supplier_show',
+            ],
+            [
+                'id'    => '36',
+                'title' => 'supplier_delete',
+            ],
+            [
+                'id'    => '37',
+                'title' => 'supplier_access',
+            ],
+            [
+                'id'    => '38',
+                'title' => 'pharmaceutical_form_create',
+            ],
+            [
+                'id'    => '39',
+                'title' => 'pharmaceutical_form_edit',
+            ],
+            [
+                'id'    => '40',
+                'title' => 'pharmaceutical_form_show',
+            ],
+            [
+                'id'    => '41',
+                'title' => 'pharmaceutical_form_delete',
+            ],
+            [
+                'id'    => '42',
+                'title' => 'pharmaceutical_form_access',
+            ],
+            [
+                'id'    => '43',
                 'title' => 'profile_password_edit',
             ],
         ];

@@ -1,11 +1,11 @@
 <?php
 
 return [
-    'userManagement' => [
+    'userManagement'     => [
         'title'          => 'Gestión de usuarios',
         'title_singular' => 'Gestión de usuarios',
     ],
-    'permission'     => [
+    'permission'         => [
         'title'          => 'Permisos',
         'title_singular' => 'Permiso',
         'fields'         => [
@@ -21,7 +21,7 @@ return [
             'deleted_at_helper' => '',
         ],
     ],
-    'role'           => [
+    'role'               => [
         'title'          => 'Roles',
         'title_singular' => 'Rol',
         'fields'         => [
@@ -39,7 +39,7 @@ return [
             'deleted_at_helper'  => '',
         ],
     ],
-    'user'           => [
+    'user'               => [
         'title'          => 'Usuarios',
         'title_singular' => 'Usuario',
         'fields'         => [
@@ -65,9 +65,9 @@ return [
             'deleted_at_helper'        => '',
         ],
     ],
-    'rawMaterial'    => [
-        'title'          => 'Raw Material',
-        'title_singular' => 'Raw Material',
+    'rawMaterial'        => [
+        'title'          => 'Materia Prima',
+        'title_singular' => 'Materia Prima',
         'fields'         => [
             'id'                => 'ID',
             'id_helper'         => '',
@@ -81,11 +81,11 @@ return [
             'deleted_at_helper' => '',
         ],
     ],
-    'product'        => [
+    'product'            => [
         'title'          => 'Productos',
         'title_singular' => 'Producto',
     ],
-    'laboratory'     => [
+    'laboratory'         => [
         'title'          => 'Laboratorio',
         'title_singular' => 'Laboratorio',
         'fields'         => [
@@ -101,7 +101,7 @@ return [
             'deleted_at_helper' => '',
         ],
     ],
-    'baseproduct'    => [
+    'baseproduct'        => [
         'title'          => 'Producto base',
         'title_singular' => 'Producto base',
         'fields'         => [
@@ -119,6 +119,40 @@ return [
             'updated_at_helper'   => '',
             'deleted_at'          => 'Deleted at',
             'deleted_at_helper'   => '',
+        ],
+    ],
+    'supplier'           => [
+        'title'          => 'Proveedor',
+        'title_singular' => 'Proveedor',
+        'fields'         => [
+            'id'                => 'ID',
+            'id_helper'         => '',
+            'name'              => 'Nombre',
+            'name_helper'       => '',
+            'created_at'        => 'Created at',
+            'created_at_helper' => '',
+            'updated_at'        => 'Updated at',
+            'updated_at_helper' => '',
+            'deleted_at'        => 'Deleted at',
+            'deleted_at_helper' => '',
+        ],
+    ],
+    'pharmaceuticalForm' => [
+        'title'          => 'Forma Farmaceutica',
+        'title_singular' => 'Forma Farmaceutica',
+        'fields'         => [
+            'id'                => 'ID',
+            'id_helper'         => '',
+            'long_name'         => 'Nombre Largo',
+            'long_name_helper'  => '',
+            'short_name'        => 'Nombre Corto',
+            'short_name_helper' => '',
+            'created_at'        => 'Created at',
+            'created_at_helper' => '',
+            'updated_at'        => 'Updated at',
+            'updated_at_helper' => '',
+            'deleted_at'        => 'Deleted at',
+            'deleted_at_helper' => '',
         ],
     ],
 ];

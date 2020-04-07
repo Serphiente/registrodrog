@@ -19,4 +19,10 @@ Route::group(['prefix' => 'v1', 'as' => 'api.', 'namespace' => 'Api\V1\Admin', '
     // Baseproducts
     Route::apiResource('baseproducts', 'BaseproductApiController');
 
+    // Suppliers
+    Route::apiResource('suppliers', 'SupplierApiController');
+
+    // Pharmaceutical Forms
+    Route::apiResource('pharmaceutical-forms', 'PharmaceuticalFormApiController');
+
 });
