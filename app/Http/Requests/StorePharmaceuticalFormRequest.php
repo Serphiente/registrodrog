@@ -1,0 +1,30 @@
+<?php
+
+namespace App\Http\Requests;
+
+use App\PharmaceuticalForm;
+use Gate;
+use Illuminate\Foundation\Http\FormRequest;
+use Symfony\Component\HttpFoundation\Response;
+
+class StorePharmaceuticalFormRequest extends FormRequest
+{
+    public function authorize()
+    {
+        abort_if(Gate::denies('pharmaceutical_form_create'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+
+        return true;
+
+    }
+
+    public function rules()
+    {
+        return [
+            'long_name'  => [
+                'required'],
+            'short_name' => [
+                'required'],
+        ];
+
+    }
+}

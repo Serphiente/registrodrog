@@ -38,6 +38,14 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::delete('baseproducts/destroy', 'BaseproductController@massDestroy')->name('baseproducts.massDestroy');
     Route::resource('baseproducts', 'BaseproductController');
 
+    // Suppliers
+    Route::delete('suppliers/destroy', 'SupplierController@massDestroy')->name('suppliers.massDestroy');
+    Route::resource('suppliers', 'SupplierController');
+
+    // Pharmaceutical Forms
+    Route::delete('pharmaceutical-forms/destroy', 'PharmaceuticalFormController@massDestroy')->name('pharmaceutical-forms.massDestroy');
+    Route::resource('pharmaceutical-forms', 'PharmaceuticalFormController');
+
 });
 Route::group(['prefix' => 'profile', 'as' => 'profile.', 'namespace' => 'Auth', 'middleware' => ['auth']], function () {
 // Change password

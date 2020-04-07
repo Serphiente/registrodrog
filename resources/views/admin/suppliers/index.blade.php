@@ -1,32 +1,32 @@
 @extends('layouts.admin')
 @section('content')
-@can('raw_material_create')
+@can('supplier_create')
     <div style="margin-bottom: 10px;" class="row">
         <div class="col-lg-12">
-            <a class="btn btn-success" href="{{ route("admin.raw-materials.create") }}">
-                {{ trans('global.add') }} {{ trans('cruds.rawMaterial.title_singular') }}
+            <a class="btn btn-success" href="{{ route("admin.suppliers.create") }}">
+                {{ trans('global.add') }} {{ trans('cruds.supplier.title_singular') }}
             </a>
         </div>
     </div>
 @endcan
 <div class="card">
     <div class="card-header">
-        {{ trans('cruds.rawMaterial.title_singular') }} {{ trans('global.list') }}
+        {{ trans('cruds.supplier.title_singular') }} {{ trans('global.list') }}
     </div>
 
     <div class="card-body">
         <div class="table-responsive">
-            <table class=" table table-bordered table-striped table-hover datatable datatable-RawMaterial">
+            <table class=" table table-bordered table-striped table-hover datatable datatable-Supplier">
                 <thead>
                     <tr>
                         <th width="10">
 
                         </th>
                         <th>
-                            {{ trans('cruds.rawMaterial.fields.id') }}
+                            {{ trans('cruds.supplier.fields.id') }}
                         </th>
                         <th>
-                            {{ trans('cruds.rawMaterial.fields.material') }}
+                            {{ trans('cruds.supplier.fields.name') }}
                         </th>
                         <th>
                             &nbsp;
@@ -34,32 +34,32 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($rawMaterials as $key => $rawMaterial)
-                        <tr data-entry-id="{{ $rawMaterial->id }}">
+                    @foreach($suppliers as $key => $supplier)
+                        <tr data-entry-id="{{ $supplier->id }}">
                             <td>
 
                             </td>
                             <td>
-                                {{ $rawMaterial->id ?? '' }}
+                                {{ $supplier->id ?? '' }}
                             </td>
                             <td>
-                                {{ $rawMaterial->material ?? '' }}
+                                {{ $supplier->name ?? '' }}
                             </td>
                             <td>
-                                @can('raw_material_show')
-                                    <a class="btn btn-xs btn-primary" href="{{ route('admin.raw-materials.show', $rawMaterial->id) }}">
+                                @can('supplier_show')
+                                    <a class="btn btn-xs btn-primary" href="{{ route('admin.suppliers.show', $supplier->id) }}">
                                         {{ trans('global.view') }}
                                     </a>
                                 @endcan
 
-                                @can('raw_material_edit')
-                                    <a class="btn btn-xs btn-info" href="{{ route('admin.raw-materials.edit', $rawMaterial->id) }}">
+                                @can('supplier_edit')
+                                    <a class="btn btn-xs btn-info" href="{{ route('admin.suppliers.edit', $supplier->id) }}">
                                         {{ trans('global.edit') }}
                                     </a>
                                 @endcan
 
-                                @can('raw_material_delete')
-                                    <form action="{{ route('admin.raw-materials.destroy', $rawMaterial->id) }}" method="POST" onsubmit="return confirm('{{ trans('global.areYouSure') }}');" style="display: inline-block;">
+                                @can('supplier_delete')
+                                    <form action="{{ route('admin.suppliers.destroy', $supplier->id) }}" method="POST" onsubmit="return confirm('{{ trans('global.areYouSure') }}');" style="display: inline-block;">
                                         <input type="hidden" name="_method" value="DELETE">
                                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                         <input type="submit" class="btn btn-xs btn-danger" value="{{ trans('global.delete') }}">
@@ -84,11 +84,11 @@
 <script>
     $(function () {
   let dtButtons = $.extend(true, [], $.fn.dataTable.defaults.buttons)
-@can('raw_material_delete')
+@can('supplier_delete')
   let deleteButtonTrans = '{{ trans('global.datatables.delete') }}'
   let deleteButton = {
     text: deleteButtonTrans,
-    url: "{{ route('admin.raw-materials.massDestroy') }}",
+    url: "{{ route('admin.suppliers.massDestroy') }}",
     className: 'btn-danger',
     action: function (e, dt, node, config) {
       var ids = $.map(dt.rows({ selected: true }).nodes(), function (entry) {
@@ -118,7 +118,7 @@
     order: [[ 2, 'asc' ]],
     pageLength: 100,
   });
-  $('.datatable-RawMaterial:not(.ajaxTable)').DataTable({ buttons: dtButtons })
+  $('.datatable-Supplier:not(.ajaxTable)').DataTable({ buttons: dtButtons })
     $('a[data-toggle="tab"]').on('shown.bs.tab', function(e){
         $($.fn.dataTable.tables(true)).DataTable()
             .columns.adjust();
