@@ -4,13 +4,14 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateBaseproductsTable extends Migration
+class CreatePurchaseOrdersTable extends Migration
 {
     public function up()
     {
-        Schema::create('baseproducts', function (Blueprint $table) {
+        Schema::create('purchase_orders', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name')->unique();
+            $table->date('date');
+            $table->string('invoice_number');
             $table->timestamps();
             $table->softDeletes();
         });

@@ -19,10 +19,11 @@ class Baseproduct extends Model
 
     protected $fillable = [
         'name',
+        'medida',
+        'laboratory_id',
         'created_at',
         'updated_at',
         'deleted_at',
-        'laboratory_id',
     ];
 
     public function raw_materials()
