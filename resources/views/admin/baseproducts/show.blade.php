@@ -33,6 +33,14 @@
                     </tr>
                     <tr>
                         <th>
+                            {{ trans('cruds.baseproduct.fields.medida') }}
+                        </th>
+                        <td>
+                            {{ $baseproduct->medida }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
                             {{ trans('cruds.baseproduct.fields.raw_material') }}
                         </th>
                         <td>

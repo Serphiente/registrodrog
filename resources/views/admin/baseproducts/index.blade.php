@@ -29,6 +29,9 @@
                             {{ trans('cruds.baseproduct.fields.name') }}
                         </th>
                         <th>
+                            {{ trans('cruds.baseproduct.fields.medida') }}
+                        </th>
+                        <th>
                             {{ trans('cruds.baseproduct.fields.raw_material') }}
                         </th>
                         <th>
@@ -50,6 +53,9 @@
                             </td>
                             <td>
                                 {{ $baseproduct->name ?? '' }}
+                            </td>
+                            <td>
+                                {{ $baseproduct->medida ?? '' }}
                             </td>
                             <td>
                                 @foreach($baseproduct->raw_materials as $key => $item)

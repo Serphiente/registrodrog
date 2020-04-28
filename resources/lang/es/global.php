@@ -3,7 +3,7 @@
 return [
     'actions'                              => 'Acciones',
     'add'                                  => 'Agregar',
-    'allRightsReserved'                    => 'Todos los derecho reservados.',
+    'allRightsReserved'                    => 'Todos los derechos reservados.',
     'areYouSure'                           => 'Estás seguro?',
     'clickHereToVerify'                    => 'Haga click para verificar',
     'create'                               => 'Crear',
@@ -52,7 +52,7 @@ return [
     'yourAccountNeedsAdminApproval'        => 'Sus cuentas necesitan la aprobación de un administrador para iniciar sesión',
     'submit'                               => 'Enviar',
     'relatedData'                          => 'Datos relacionados',
-    'change_password_success'              => 'Password changed successfully',
+    'change_password_success'              => 'Contraseña cambiada correctamente',
     'datatables'                           => [
         'copy'          => 'Copiar',
         'csv'           => 'CSV',

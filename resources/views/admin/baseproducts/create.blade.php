@@ -18,6 +18,14 @@
                 <span class="help-block">{{ trans('cruds.baseproduct.fields.name_helper') }}</span>
             </div>
             <div class="form-group">
+                <label for="medida">{{ trans('cruds.baseproduct.fields.medida') }}</label>
+                <input class="form-control {{ $errors->has('medida') ? 'is-invalid' : '' }}" type="text" name="medida" id="medida" value="{{ old('medida', '') }}">
+                @if($errors->has('medida'))
+                    <span class="text-danger">{{ $errors->first('medida') }}</span>
+                @endif
+                <span class="help-block">{{ trans('cruds.baseproduct.fields.medida_helper') }}</span>
+            </div>
+            <div class="form-group">
                 <label class="required" for="raw_materials">{{ trans('cruds.baseproduct.fields.raw_material') }}</label>
                 <div style="padding-bottom: 4px">
                     <span class="btn btn-info btn-xs select-all" style="border-radius: 0">{{ trans('global.select_all') }}</span>

@@ -46,6 +46,12 @@ class User extends Authenticatable
 
     }
 
+    public function userUserAlerts()
+    {
+        return $this->belongsToMany(UserAlert::class);
+
+    }
+
     public function getEmailVerifiedAtAttribute($value)
     {
         return $value ? Carbon::createFromFormat('Y-m-d H:i:s', $value)->format(config('panel.date_format') . ' ' . config('panel.time_format')) : null;

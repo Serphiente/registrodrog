@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'site_title' => 'DrogConce',
+    'site_title' => 'Droguería Concepción',
 ];
